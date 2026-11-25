@@ -1,5 +1,5 @@
 
-import { Anchor, Avatar, Button, Text } from "@mantine/core";
+import { Anchor, Button, Text } from "@mantine/core";
 import { IconUser } from "@tabler/icons-react";
 
 export function Header() {
