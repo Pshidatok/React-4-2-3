@@ -1,0 +1,429 @@
+:root {
+  --primary: #4263eb;
+  --dark-primary: #364fc7;
+
+  --black: #0f0f10;
+  --gray: rgba(15, 15, 16, 0.5);
+  --light-gray: rgba(15, 15, 16, 0.3);
+  --pre-light: rgba(15, 15, 16, 0.2);
+  --ultra-light: rgba(15, 15, 16, 0.1);
+
+  --background: #f6f6f7;
+  --white: #ffffff;
+}
+
+/* Общие стили */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--black);
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Шапка */
+
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--ultra-light);
+}
+
+.header-container {
+  max-width: 1200px;
+  min-height: 76px;
+  margin: 0 auto;
+  padding: 12px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ .logo-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e31e24 !important;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu-link {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.menu-link:hover {
+  color: var(--primary);
+}
+
+.menu-button {
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Заголовок и поиск */
+
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title-main {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.title-sub {
+  margin: 0;
+  font-size: 15px;
+  color: var(--gray);
+}
+
+.search-form {
+  width: 100%;
+  max-width: 520px;
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-input input {
+  height: 44px;
+  border: 1px solid var(--pre-light);
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+.search-input input:focus {
+  border-color: var(--primary);
+}
+
+.search-button {
+  height: 44px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background-color: var(--dark-primary);
+}
+
+/* Основная часть */
+
+.main-row {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.left-column,
+.right-column {
+  min-width: 0;
+}
+
+/* Фильтры */
+
+.filters {
+  padding: 20px;
+  background-color: var(--white);
+  border: 1px solid var(--ultra-light);
+  border-radius: 12px;
+}
+
+.filter-section {
+  margin-bottom: 24px;
+}
+
+.filter-section:last-child {
+  margin-bottom: 0;
+}
+
+.filter-section h3 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.city-select {
+  width: 100%;
+}
+
+.city-select input {
+  border-color: var(--pre-light);
+  border-radius: 8px;
+}
+
+/* Фильтр навыков */
+
+.skills-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.skill-form {
+  display: flex;
+  gap: 8px;
+}
+
+.skill-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.skill-input input {
+  border-color: var(--pre-light);
+  border-radius: 8px;
+}
+
+.skill-button {
+  min-width: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.2s;
+}
+
+.skill-button:hover {
+  background-color: var(--dark-primary);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.skill-pill {
+  cursor: pointer;
+}
+
+/* Список вакансий */
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.job-card {
+  padding: 20px;
+  background-color: var(--white);
+  border: 1px solid var(--ultra-light);
+  border-radius: 12px;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+.job-card:hover {
+  border-color: var(--pre-light);
+  box-shadow: 0 4px 16px rgba(15, 15, 16, 0.05);
+}
+
+.job-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.job-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.job-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.job-salary {
+  color: var(--primary);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.job-muted {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.job-company {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.job-button {
+  align-self: flex-start;
+  min-height: 40px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.job-button:hover {
+  background-color: var(--dark-primary);
+}
+
+/* Состояния загрузки и ошибок */
+
+.job-status {
+  padding: 32px;
+  text-align: center;
+  color: var(--gray);
+}
+
+.job-empty {
+  padding: 32px 20px;
+  border-radius: 12px;
+  background-color: var(--white);
+  text-align: center;
+  color: var(--gray);
+}
+
+/* Пагинация */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* Адаптация под небольшие экраны */
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 16px;
+  }
+
+  .header-container {
+    padding: 12px 16px;
+  }
+
+  .top-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-form {
+    max-width: none;
+  }
+
+  .main-row {
+    grid-template-columns: 1fr;
+  }
+
+  .title-main {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .header-menu {
+    gap: 12px;
+  }
+
+  .search-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .job-card {
+    padding: 16px;
+  }
+}
